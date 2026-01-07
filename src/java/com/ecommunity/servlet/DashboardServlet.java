@@ -1,10 +1,12 @@
 package com.ecommunity.servlet;
 
 import com.ecommunity.bean.User;
+import com.ecommunity.bean.VolunteerProgram;
 import com.ecommunity.dao.UserDAO;
 import com.ecommunity.dao.VolunteerProgramDAO;
 import com.ecommunity.dao.ParticipationDAO;
 import java.io.IOException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -59,7 +61,7 @@ public class DashboardServlet extends HttpServlet {
             double myTotalHours = participationDAO.getTotalHoursByUser(currentUser.getUserId());
             
             // Recent programs (limit to 5)
-            var recentPrograms = programDAO.getRecentPrograms(5);
+            List<VolunteerProgram> recentPrograms = programDAO.getRecentPrograms(5);
             
             // Upcoming programs count
             int upcomingPrograms = programDAO.getUpcomingProgramCount();

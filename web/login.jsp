@@ -38,6 +38,7 @@
             <div class="col-lg-5 col-md-7">
                 <div class="login-card">
                     <div class="logo-section">
+                        <img src="images/uitm-logo.png" alt="UiTM Logo" style="max-width: 150px; margin-bottom: 20px;">
                         <h1>E-Community</h1>
                         <p class="text-muted">Volunteer & Service Platform</p>
                     </div>
@@ -98,6 +99,7 @@
         </div>
     </div>
     
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
