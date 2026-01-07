@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <footer class="bg-dark text-white mt-5 py-4">
     <div class="container">
         <div class="row">

@@ -1,5 +1,6 @@
 package com.ecommunity.servlet;
 
+import com.ecommunity.dao.ActivityLogDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,6 +16,13 @@ import javax.servlet.http.HttpSession;
 @WebServlet(name = "LogoutServlet", urlPatterns = {"/logout"})
 public class LogoutServlet extends HttpServlet {
     
+    private ActivityLogDAO activityLogDAO;
+    
+    @Override
+    public void init() throws ServletException {
+        activityLogDAO = new ActivityLogDAO();
+    }
+    
     /**
      * Handles GET request - Process logout
      */
@@ -26,10 +34,12 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = request.getSession(false);
         
         if (session != null) {
-            // Log activity before destroying session (optional)
+            // Log activity before destroying session
             Integer userId = (Integer) session.getAttribute("userId");
             if (userId != null) {
-                // activityLogDAO.logActivity(userId, "LOGOUT", "User logged out", request.getRemoteAddr());
+                String ipAddress = request.getRemoteAddr();
+                activityLogDAO.logActivity(userId, "LOGOUT", 
+                    "User logged out successfully", ipAddress);
                 System.out.println("User " + userId + " logged out");
             }
             

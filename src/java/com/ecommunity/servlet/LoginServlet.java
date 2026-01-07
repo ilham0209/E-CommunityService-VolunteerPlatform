@@ -2,6 +2,7 @@ package com.ecommunity.servlet;
 
 import com.ecommunity.bean.User;
 import com.ecommunity.dao.UserDAO;
+import com.ecommunity.dao.ActivityLogDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

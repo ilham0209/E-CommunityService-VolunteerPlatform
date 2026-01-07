@@ -5,62 +5,74 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- * Database Connection Utility for Java DB (Derby) - Singleton Pattern
+ * DBConnection
+ * Utility class to manage Java DB (Apache Derby) connection
+ * Compatible with NetBeans 8.2
  */
 public class DBConnection {
-    
-    // Java DB (Derby) connection settings
-    private static final String DB_URL = "jdbc:derby://localhost:1527/E-Community Platform";
+
+    // ===============================
+    // DATABASE CONFIGURATION
+    // ===============================
+    private static final String DB_URL =
+            "jdbc:derby://localhost:1527/ecommunity_db";
+
     private static final String DB_USER = "sa";
     private static final String DB_PASSWORD = "swizard";
-    private static Connection connection = null;
-    
-    // Private constructor to prevent instantiation
+
+    private static Connection connection;
+
+    // ===============================
+    // PREVENT INSTANTIATION
+    // ===============================
     private DBConnection() {
+        // private constructor
     }
-    
-    /**
-     * Get database connection using Singleton pattern
-     * @return Connection object
-     */
+
+    // ===============================
+    // GET CONNECTION
+    // ===============================
     public static Connection getConnection() {
         try {
             if (connection == null || connection.isClosed()) {
-                // Load Derby JDBC Driver
+
+                // Load Derby Client Driver
                 Class.forName("org.apache.derby.jdbc.ClientDriver");
-                
-                // Create connection
-                connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-                System.out.println("Java DB (Derby) connected successfully!");
+
+                // Create database connection
+                connection = DriverManager.getConnection(
+                        DB_URL, DB_USER, DB_PASSWORD);
+
+                System.out.println("✅ Connected to Java DB (Derby)");
             }
         } catch (ClassNotFoundException e) {
-            System.err.println("Derby JDBC Driver not found!");
+            System.err.println("❌ Derby JDBC Driver not found");
             e.printStackTrace();
         } catch (SQLException e) {
-            System.err.println("Database connection failed!");
+            System.err.println("❌ Failed to connect to database");
             e.printStackTrace();
         }
         return connection;
     }
-    
-    /**
-     * Close database connection
-     */
+
+    // ===============================
+    // CLOSE CONNECTION
+    // ===============================
     public static void closeConnection() {
         try {
             if (connection != null && !connection.isClosed()) {
                 connection.close();
-                System.out.println("Database connection closed.");
+                System.out.println("🔌 Database connection closed");
             }
         } catch (SQLException e) {
-            System.err.println("Error closing database connection!");
+            System.err.println("❌ Error closing database connection");
             e.printStackTrace();
         }
     }
-    
-    /**
-     * Test database connection
-     */
+
+    // ===============================
+    // TEST CONNECTION
+    // ===============================
     public static boolean testConnection() {
         try {
             Connection conn = getConnection();

@@ -2,26 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/user-list.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/servlet/UserAdminServlet.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/includes/header.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/dao/UserDAO.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/program-form.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/profile.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/includes/navbar.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/includes/footer.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/servlet/RegisterServlet.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/servlet/DashboardServlet.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/my-participations.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/bean/VolunteerProgram.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/servlet/ParticipationServlet.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/login.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/bean/User.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/dao/VolunteerProgramDAO.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/program-list.jsp</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/src/java/com/ecommunity/servlet/LoginServlet.java</file>
-            <file>file:/C:/Users/Ilham/Documents/NetBeansProjects/E-Community%20Service%20And%20Volunteer%20Platform/web/program-detail.jsp</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

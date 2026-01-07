@@ -27,6 +27,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="user-list">User List</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="activity-log">Activity Log</a>
+                        </li>
                     </c:if>
                 </c:if>
             </ul>
