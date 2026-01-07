@@ -70,7 +70,7 @@
         </div>
         
         <!-- Recent Programs -->
-        <div class="row">
+<!--        <div class="row">
             <div class="col-12">
                 <h3 class="mb-3">Recent Programs</h3>
                 <div class="table-responsive">
@@ -110,7 +110,7 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div>-->
         
         <!-- Quick Actions -->
         <div class="row mt-4">

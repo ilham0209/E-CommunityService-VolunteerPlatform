@@ -80,6 +80,10 @@
                                     <td>
                                         <a href="program-detail.jsp?id=<%= p.getProgramId() %>" 
                                            class="btn btn-sm btn-primary">View</a>
+                                        <form action="participation?action=cancel" method="POST" style="display: inline;">
+                                            <input type="hidden" name="participationId" value="<%= p.getParticipationId() %>">
+                                            <button type="submit" class="btn btn-sm btn-danger btn-delete">Cancel</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 <% } %>

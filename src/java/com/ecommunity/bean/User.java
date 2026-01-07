@@ -22,6 +22,7 @@ public class User implements Serializable {
     private String phoneNumber;
     private Timestamp registrationDate;
     private boolean isDeleted;
+    private boolean isAdmin; // NEW: Admin flag
     private Timestamp createdAt;
     private Timestamp updatedAt;
     
@@ -116,6 +117,14 @@ public class User implements Serializable {
     
     public void setDeleted(boolean isDeleted) {
         this.isDeleted = isDeleted;
+    }
+    
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+    
+    public void setAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
     
     public Timestamp getCreatedAt() {

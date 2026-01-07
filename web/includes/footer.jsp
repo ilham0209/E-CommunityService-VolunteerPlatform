@@ -1,4 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <footer class="bg-dark text-white mt-5 py-4">
     <div class="container">
         <div class="row">
@@ -17,8 +16,8 @@
             <div class="col-md-3">
                 <h5>Contact</h5>
                 <p class="text-white-50">
-                    Email: info@ecommunity.com<br>
-                    Phone: +60 123-456-7890
+                    Email: danialilham53@gmail.com<br>
+                    Phone: +601 485 5456
                 </p>
             </div>
         </div>

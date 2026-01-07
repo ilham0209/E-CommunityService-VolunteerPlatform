@@ -22,7 +22,7 @@
                 <p class="text-muted">Browse and join community service programs</p>
             </div>
             <div class="col-md-4 text-end">
-                <c:if test="${not empty sessionScope.user}">
+                <c:if test="${sessionScope.isAdmin}">
                     <a href="program?action=create" class="btn btn-primary">Create New Program</a>
                 </c:if>
             </div>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="card-footer">
                             <a href="program-detail.jsp?id=<%= program.getProgramId() %>" class="btn btn-sm btn-primary">View Details</a>
-                            <c:if test="${not empty sessionScope.user}">
+                            <c:if test="${sessionScope.isAdmin}">
                                 <a href="program?action=edit&id=<%= program.getProgramId() %>" class="btn btn-sm btn-warning">Edit</a>
                                 <form action="program-delete" method="POST" style="display: inline;">
                                     <input type="hidden" name="programId" value="<%= program.getProgramId() %>">

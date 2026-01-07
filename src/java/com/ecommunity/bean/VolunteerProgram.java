@@ -82,4 +82,3 @@ public class VolunteerProgram implements Serializable {
     public Timestamp getUpdatedAt() { return updatedAt; }
     public void setUpdatedAt(Timestamp updatedAt) { this.updatedAt = updatedAt; }
 }
-

@@ -216,6 +216,7 @@ public class UserDAO {
         user.setPhoneNumber(rs.getString("phone_number"));
         user.setRegistrationDate(rs.getTimestamp("registration_date"));
         user.setDeleted(rs.getBoolean("is_deleted"));
+        user.setAdmin(rs.getBoolean("is_admin")); // NEW: Read admin flag
         user.setCreatedAt(rs.getTimestamp("created_at"));
         user.setUpdatedAt(rs.getTimestamp("updated_at"));
         return user;

@@ -81,6 +81,7 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("userId", user.getUserId());
             session.setAttribute("userName", user.getFullName());
             session.setAttribute("userType", user.getUserType());
+            session.setAttribute("isAdmin", user.isAdmin()); // NEW: Store admin status
             
             // Set session timeout (30 minutes)
             session.setMaxInactiveInterval(30 * 60);

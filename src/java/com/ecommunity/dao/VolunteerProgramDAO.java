@@ -1,4 +1,3 @@
-// ==================== VolunteerProgramDAO.java ====================
 package com.ecommunity.dao;
 
 import com.ecommunity.bean.VolunteerProgram;
@@ -87,7 +86,7 @@ public class VolunteerProgramDAO {
     public boolean updateProgram(VolunteerProgram program) {
         String sql = "UPDATE volunteer_program SET program_name = ?, description = ?, " +
                      "location = ?, start_date = ?, end_date = ?, max_participants = ?, " +
-                     "category = ?, status = ? WHERE program_id = ? AND is_deleted = 0";
+                     "category = ?, status = ?, current_participants = ? WHERE program_id = ? AND is_deleted = 0";
         
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, program.getProgramName());
@@ -98,7 +97,8 @@ public class VolunteerProgramDAO {
             stmt.setInt(6, program.getMaxParticipants());
             stmt.setString(7, program.getCategory());
             stmt.setString(8, program.getStatus());
-            stmt.setInt(9, program.getProgramId());
+            stmt.setInt(9, program.getCurrentParticipants()); // ADD THIS
+            stmt.setInt(10, program.getProgramId());
             
             return stmt.executeUpdate() > 0;
         } catch (SQLException e) {
